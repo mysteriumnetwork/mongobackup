@@ -23,6 +23,6 @@ fi
 echo "[default]
 aws_access_key_id=$AWS_KEY_ID
 aws_secret_access_key=$AWS_KEY
-region=nl-ams" > /root/.aws/credentials
+region=$REGION" > /root/.aws/credentials
 
 exec /backup.sh

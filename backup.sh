@@ -17,7 +17,7 @@ dump_status=$?
 if [ $dump_status -eq 0 ]; then
   echo "Mongo Database backup succeeded!"
 else
-  echo "Postgres Database backup didn't succeed! Exiting."
+  echo "Mongo Database backup didn't succeed! Exiting."
   exit 1
 fi
 
@@ -28,7 +28,7 @@ if [[ -n "$TARGET_S3_FOLDER" ]]; then
     if [ $upload_status -eq 0 ]; then
       echo "Mongo Database backup [$FILE] upload to $TARGET_S3_FOLDER succeeded!"
     else
-      echo "Postgres Database backup upload didn't succeed! Exiting."
+      echo "Mongo Database backup upload didn't succeed! Exiting."
       exit 1
     fi
 fi
